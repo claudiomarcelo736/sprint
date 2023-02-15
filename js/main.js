@@ -33,6 +33,17 @@ const nombreProducto = document.createElement('h2');
 nombreProducto.classList.add('fw-normal');
 nombreProducto.textContent = `${productos[0].nombre} - ${productos[0].descripcion}`;
 /* Descripción Larga del Producto */
+const descripcionProducto = document.createElement("p");
+descripcionProducto.textContent = productos[0].descripcion;
+// precio del producto
+const precioProducto = document.createElement("h2");
+precioProducto.classList.add('fw-normal');
+precioProducto.textContent = "precio: $" + productos[0].precio;
+// boton del producto
+const botonProducto = document.createElement("p");
+botonProducto.innerHTML = '<a class="btn btn-secondary" href="#">Añadir al Carrito &raquo;</a>';
+
+
 
 
 // mostrador[0].appendChild(articuloProducto);
