@@ -64,9 +64,15 @@ for(i = 0; i < productos.length; i++) {
 
 let carrito = [];
 const numeroCarrito = document.getElementById('numeroCarrito');
+const listaCarrito = document.getElementById('listaCarrito');
 
 function agregarCarrito() {
-    
+    /* Artículo a ser agregado al carrito */
+    const articuloCarrito = document.createElement('div');
+    articuloCarrito.classList.add('ms-2', 'me-auto');
+    const nombreCarrito = document.createElement('div');
+    nombreCarrito.classList.add('fw-bold');
+    // nombreCarrito.textContent = '';
 }
 
 
