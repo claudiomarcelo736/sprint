@@ -1,0 +1,24 @@
+<!-- Resumen productos carrito -->
+
+<div class="col-md-7">
+    <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start" id="listaCarrito">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Notebook Acer 14"</div>
+                <span>$ 165.000</span>
+            </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Pantalla ASUS 24"</div>
+                <span>$ 115.000</span>
+            </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Mouse HP Wireless 700</div>
+                <span>$ 15.000</span>
+            </div>
+        </li>
+    </ol>
+</div>

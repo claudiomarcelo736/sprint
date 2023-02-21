@@ -46,33 +46,42 @@ for(i = 0; i < productos.length; i++) {
     const precioProducto = document.createElement("h2");
     precioProducto.classList.add('fw-normal');
     precioProducto.textContent = "Precio: " + formatoPesoCLP.format(productos[i].precio);
-    //  Botón del producto
-    const botonProducto = document.createElement("p");
-    botonProducto.innerHTML = '<a class="btn btn-secondary" href="#">Añadir al Carrito &raquo;</a>';
-    botonProducto.addEventListener('click', agregarCarrito);
+    //  Selector y cantidad del producto
+    const selectorProducto = document.createElement("div");
+    selectorProducto.classList.add('selectorProducto');
+    // Cajita de marca de producto
+    const casillaProducto = document.createElement("input");
+    casillaProducto.setAttribute('type', 'checkbox');
+    casillaProducto.classList.add('casillaProducto');
+    casillaProducto.addEventListener('change', agregarCarrito);
+    // Cantidad de Producto
+    const cantidadProducto = document.createElement('input');
+    cantidadProducto.classList.add('cantidadProducto');
+    cantidadProducto.setAttribute('type', 'number');
+    cantidadProducto.setAttribute('step', '1');
+    cantidadProducto.setAttribute('maxLength', '1');
+    cantidadProducto.setAttribute('min', '0');
+    cantidadProducto.setAttribute('max', '9');
+    cantidadProducto.setAttribute('value', 0);
+    cantidadProducto.addEventListener('change', agregarCarrito);
 
     /* Agregar elementos al articuloProducto */
     articuloProducto.appendChild(imagenProducto);
     articuloProducto.appendChild(nombreProducto);
     articuloProducto.appendChild(descripcionProducto);
     articuloProducto.appendChild(precioProducto);
-    articuloProducto.appendChild(botonProducto);
+    selectorProducto.appendChild(casillaProducto);
+    selectorProducto.appendChild(cantidadProducto);
+    articuloProducto.appendChild(selectorProducto);
 
     /* Agregar articuloProducto al mostrador */
     mostrador[0].appendChild(articuloProducto);
 }
 
 let carrito = [];
-const numeroCarrito = document.getElementById('numeroCarrito');
-const listaCarrito = document.getElementById('listaCarrito');
 
 function agregarCarrito() {
-    /* Artículo a ser agregado al carrito */
-    const articuloCarrito = document.createElement('div');
-    articuloCarrito.classList.add('ms-2', 'me-auto');
-    const nombreCarrito = document.createElement('div');
-    nombreCarrito.classList.add('fw-bold');
-    // nombreCarrito.textContent = '';
+    alert('Modifica Carrito');
 }
 
 
