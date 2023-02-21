@@ -2,13 +2,13 @@ const productos = [
     {imagen: 'img/notebook.jpeg', nombre: 'Notebook Acer 14"', descripcion: "Un equipo perfecto para trabajar en la marcha gracias a su versatilidad, poder de procesamiento y vida útil de la batería.", precio: 500000},
     {imagen: 'img/mouse.webp', nombre: 'mouse', descripcion: "mouse gamer alambrico", precio: 70000},
     {imagen: 'img/teclado.webp', nombre: 'teclado', codigo: 3, descripcion: "teclado ergonometrico con retroiluminacion", precio: 100000},
-    {imagen: 'img/imagen3.jpg', nombre: 'monitor', codigo: 4, descripcion: "monitor pantalla plana 21", precio: 200000},
-    {imagen: 'img/imagen5.jpg', nombre: 'celular', codigo: 5, descripcion: "celular iphone 13", precio: 700000},
-    {imagen: 'img/imagen6.jpg', nombre: 'disco externo', codigo: 6, descripcion: "disco externo de 2 terabit", precio: 190000},
-    {imagen: 'img/imagen7.jpg', nombre: 'pen drive', codigo: 7, descripcion: "pen drive 256", precio: 50000},
-    {imagen: 'img/imagen8.jpg', nombre: 'ventilador', codigo: 8, descripcion: "ventilador para notebook con dos aspas", precio: 70000},
-    {imagen: 'img/imagen9.jpg', nombre: 'modem', codigo: 9, descripcion: "modem marca IRT", precio: 70000},
-    {imagen: 'img/imagen10.jpg', nombre: 'proyector', codigo: 10, descripcion: "mini proyector inalambrico", precio: 250000}
+    {imagen: 'img/monitor.jpg', nombre: 'monitor', codigo: 4, descripcion: "monitor pantalla plana 21", precio: 200000},
+    {imagen: 'img/celular.jpg', nombre: 'celular', codigo: 5, descripcion: "celular iphone 13", precio: 700000},
+    {imagen: 'img/disco duro externo.jpg', nombre: 'disco externo', codigo: 6, descripcion: "disco externo de 2 terabit", precio: 190000},
+    {imagen: 'img/pendrive.jpg', nombre: 'pen drive', codigo: 7, descripcion: "pen drive 256", precio: 50000},
+    {imagen: 'img/ventilador.webp', nombre: 'ventilador', codigo: 8, descripcion: "ventilador para notebook con dos aspas", precio: 70000},
+    {imagen: 'img/modem.jfif', nombre: 'modem', codigo: 9, descripcion: "modem marca IRT", precio: 70000},
+    {imagen: 'img/proyector.webp', nombre: 'proyector', codigo: 10, descripcion: "mini proyector inalambrico", precio: 250000}
 ]
 
 const formatoPesoCLP = new Intl.NumberFormat('es-CL', {
