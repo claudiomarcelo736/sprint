@@ -78,13 +78,59 @@ for(i = 0; i < productos.length; i++) {
     mostrador[0].appendChild(articuloProducto);
 }
 
-let carrito = [];
+const seleccionProductos = document.getElementsByClassName('selectorProducto');
+let detalleProductosCarrito = new Array();
+const listaProductos = document.getElementById('listadoCarrito');
 
 function agregarCarrito() {
-    alert('Modifica Carrito');
+    let subtotal = 0;
+    let subtotalIVA = 0;
+    let totalCarrito = 0;
+    let costoEnvio = 0;
+    let costoIVA = 0;
+    detalleProductosCarrito = [];
+    listaProductos.innerHTML = '';
+    for (let i = 0; i < seleccionProductos.length; i++) {
+        if(seleccionProductos[i].children[0].checked == true) {
+            if (seleccionProductos[i].children[1].value != 0) {
+                // Agregar precio de productos y cantidad al subtotal
+                subtotal += (productos[i].precio * seleccionProductos[i].children[1].value);
+                //Agregar código al arreglo para crear lista de productos en carrito
+                for(i2 = 0; i2 < seleccionProductos[i].children[1].value; i2++) {
+                    detalleProductosCarrito.push(i);
+                }
+            }
+            else;
+        } else;
+    }
+    // Creación de Listado de Carrito
+    for(i = 0; i < detalleProductosCarrito.length; i++) {
+        const elementoListaCarrito = document.createElement('li');
+        elementoListaCarrito.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-start');
+        const div1ElementoListaCarrito = document.createElement('div');
+        div1ElementoListaCarrito.classList.add('ms-2', 'me-auto');
+        const div2ElementoListaCarrito = document.createElement('div');
+        div2ElementoListaCarrito.classList.add('fw-bold');
+        div2ElementoListaCarrito.textContent = productos[detalleProductosCarrito[i]].nombre;
+        const div3ElementoListaCarrito = document.createElement('span');
+        div3ElementoListaCarrito.textContent = formatoPesoCLP.format(productos[detalleProductosCarrito[i]].precio);
+        div1ElementoListaCarrito.appendChild(div2ElementoListaCarrito);
+        div1ElementoListaCarrito.appendChild(div3ElementoListaCarrito);
+        elementoListaCarrito.appendChild(div1ElementoListaCarrito);
+        listaProductos.appendChild(elementoListaCarrito);
+    }
+    // Cálculo totales
+    document.getElementById('subtotalCarrito').textContent = formatoPesoCLP.format(subtotal);
+    costoIVA = subtotal * 0.19;
+    document.getElementById('ivaCarrito').textContent = formatoPesoCLP.format(costoIVA);
+    subtotalIVA = subtotal * 1.19;
+    // Cálculo de 5% de envío bajo los $100.000
+    if (subtotalIVA > 100000) {
+        document.getElementById('envioCarrito').textContent = formatoPesoCLP.format(costoEnvio);
+    } else {
+        costoEnvio = subtotalIVA * 0.05;
+        document.getElementById('envioCarrito').textContent = formatoPesoCLP.format(costoEnvio);
+    }
+    totalCarrito = subtotalIVA + costoEnvio;
+    document.getElementById('totalCarrito').textContent = formatoPesoCLP.format(totalCarrito);
 }
-
-
-/* { <label><input type="checkbox" id="cbox1" value="first_checkbox"> Este es mi primer checkbox</label><br>
-
-<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Este es mi segundo checkbox</label>} */
