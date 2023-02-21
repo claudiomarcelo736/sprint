@@ -1,14 +1,14 @@
 const productos = [
-    {imagen: 'img/notebook.jpeg', nombre: 'Notebook Acer 14"', descripcion: "Un equipo perfecto para trabajar en la marcha gracias a su versatilidad, poder de procesamiento y vida útil de la batería.", precio: 500000},
-    {imagen: 'img/mouse.webp', nombre: 'mouse', descripcion: "mouse gamer alambrico", precio: 70000},
-    {imagen: 'img/teclado.webp', nombre: 'teclado', codigo: 3, descripcion: "teclado ergonometrico con retroiluminacion", precio: 100000},
-    {imagen: 'img/monitor.jpg', nombre: 'monitor', codigo: 4, descripcion: "monitor pantalla plana 21", precio: 200000},
-    {imagen: 'img/celular.jpg', nombre: 'celular', codigo: 5, descripcion: "celular iphone 13", precio: 700000},
-    {imagen: 'img/disco duro externo.jpg', nombre: 'disco externo', codigo: 6, descripcion: "disco externo de 2 terabit", precio: 190000},
-    {imagen: 'img/pendrive.jpg', nombre: 'pen drive', codigo: 7, descripcion: "pen drive 256", precio: 50000},
-    {imagen: 'img/ventilador.webp', nombre: 'ventilador', codigo: 8, descripcion: "ventilador para notebook con dos aspas", precio: 70000},
-    {imagen: 'img/modem.jfif', nombre: 'modem', codigo: 9, descripcion: "modem marca IRT", precio: 70000},
-    {imagen: 'img/proyector.webp', nombre: 'proyector', codigo: 10, descripcion: "mini proyector inalambrico", precio: 250000}
+    {imagen: 'img/notebook.jpeg', nombre: 'Notebook Eiser 14"', descripcion: "Un equipo perfecto para trabajar en la marcha gracias a su versatilidad, poder de procesamiento y vida útil de la batería.", precio: 500000},
+    {imagen: 'img/mouse.webp', nombre: 'Mouse Longitek', descripcion: "Con sensor óptico óptimo para trabajos de precisión.", precio: 70000},
+    {imagen: 'img/teclado.webp', nombre: 'Teclado Renpragon', descripcion: "Teclado ergonómico con retroiluminación para uso nocturno.", precio: 100000},
+    {imagen: 'img/monitor.jpg', nombre: 'Monitor EMESEÍ', descripcion: "Pantalla plana de 21\" con panel tipo VA y 75 hercios de frecuencia de actualización, el paquete completo para cualquiera sea su necesidad.", precio: 200000},
+    {imagen: 'img/celular.jpg', nombre: 'iPhone 13', descripcion: "Relájate, es iPhone.", precio: 700000},
+    {imagen: 'img/disco duro externo.jpg', nombre: 'Disco Externo BData', descripcion: "2 Terabytes de capacidad, el último disco externo que necesitarás.", precio: 190000},
+    {imagen: 'img/pendrive.jpg', nombre: 'Pendrive SanDisco', descripcion: "Quién diría que 256 Gigabytes pudieran verse tan bien en su llavero.", precio: 50000},
+    {imagen: 'img/ventilador.webp', nombre: 'Ventilador DipCul', descripcion: "1400 RPM, ofreciendo potencia de enfriamiento y un silencio pulcro.", precio: 70000},
+    {imagen: 'img/modem.jfif', nombre: 'Punto de Acceso EstLand', descripcion: "WiFi, hecho fácil con su tecnología patentada \"Zero Config AP\".", precio: 70000},
+    {imagen: 'img/Proyector.webp', nombre: 'Proyector LANIX', descripcion: "Un modelo clásico pero confiable.", precio: 250000}
 ]
 
 const formatoPesoCLP = new Intl.NumberFormat('es-CL', {
