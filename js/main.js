@@ -90,8 +90,11 @@ function agregarCarrito() {
     let costoIVA = 0;
     detalleProductosCarrito = [];
     listaProductos.innerHTML = '';
+    // Recorrer listado de productos para ver que se agregó al carrito de compra
     for (let i = 0; i < seleccionProductos.length; i++) {
+        // Verifica si la casilla está marcada
         if(seleccionProductos[i].children[0].checked == true) {
+            // Verifica que la cantidad no sea 0
             if (seleccionProductos[i].children[1].value != 0) {
                 // Agregar precio de productos y cantidad al subtotal
                 subtotal += (productos[i].precio * seleccionProductos[i].children[1].value);
