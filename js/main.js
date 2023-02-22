@@ -105,21 +105,29 @@ function agregarCarrito() {
     }
     // Creación de Listado de Carrito
     for(i = 0; i < detalleProductosCarrito.length; i++) {
+        // Crea un elemento de lista
         const elementoListaCarrito = document.createElement('li');
         elementoListaCarrito.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-start');
+        // Crea el DIV que contendrá el nombre y precio
         const div1ElementoListaCarrito = document.createElement('div');
         div1ElementoListaCarrito.classList.add('ms-2', 'me-auto');
+        // Crea el DIV que tendrá el nombre
         const div2ElementoListaCarrito = document.createElement('div');
         div2ElementoListaCarrito.classList.add('fw-bold');
         div2ElementoListaCarrito.textContent = productos[detalleProductosCarrito[i]].nombre;
+        // Crea el span que tendrá el precio
         const div3ElementoListaCarrito = document.createElement('span');
         div3ElementoListaCarrito.textContent = formatoPesoCLP.format(productos[detalleProductosCarrito[i]].precio);
+        // Agrega el nombre al contenedor
         div1ElementoListaCarrito.appendChild(div2ElementoListaCarrito);
+        // Agrega el precio al contenedor
         div1ElementoListaCarrito.appendChild(div3ElementoListaCarrito);
+        // Agrega el contenedor al elemento de lista
         elementoListaCarrito.appendChild(div1ElementoListaCarrito);
+        // Agrega el elemento de lista al documento principal HTML
         listaProductos.appendChild(elementoListaCarrito);
     }
-    // Cálculo totales
+    // Cálculo de montos totales
     document.getElementById('subtotalCarrito').textContent = formatoPesoCLP.format(subtotal);
     costoIVA = subtotal * 0.19;
     document.getElementById('ivaCarrito').textContent = formatoPesoCLP.format(costoIVA);
