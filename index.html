@@ -43,8 +43,8 @@
               <a class="nav-link" href="#">Contacto</a>
             </li>
           </ul>
-          <button class="btn btn-outline-warning">Carrito <span class="badge text-bg-secondary"
-              id="numeroCarrito">0</span></button>
+          <a href="#carrito"><button class="btn btn-outline-warning">Carrito <span class="badge text-bg-secondary"
+              id="numeroCarrito">0</span></button></a>
         </div>
       </div>
     </nav>
@@ -116,26 +116,28 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider" id="carrito">
       <h2 class="text-center">Carrito</h2>
-      <div class="col-md-5">
-        <ol class="list-group" id="listadoCarrito">
-        </ol>
-      </div>
-      <div class="col-md-5">
-        <div class="card">
-          <h5 class="card-header">Detalle de Venta</h5>
-          <div class="card-body">
-            <h5 class="card-title">Subtotal:</h5>
-            <p class="card-text" id="subtotalCarrito">$162.520</p>
-            <h5 class="card-title">Costo de envío:</h5>
-            <p class="card-text" id="envioCarrito">$0</p>
-            <h5 class="card-title">IVA:</h5>
-            <p class="card-text" id="ivaCarrito">$0</p>
-            <h5 class="card-title">Total:</h5>
-            <p class="card-text" id="totalCarrito">$231.710</p>
-            <div class="row text-center">
-              <button class="btn btn-primary center">Pagar</button>
+      <div class="container row">
+        <div class="col-md-6">
+          <ol class="list-group" id="listadoCarrito">
+          </ol>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <h5 class="card-header">Detalle de Venta</h5>
+            <div class="card-body">
+              <h5 class="card-title">Subtotal:</h5>
+              <p class="card-text" id="subtotalCarrito">$162.520</p>
+              <h5 class="card-title">Costo de envío:</h5>
+              <p class="card-text" id="envioCarrito">$0</p>
+              <h5 class="card-title">IVA:</h5>
+              <p class="card-text" id="ivaCarrito">$0</p>
+              <h5 class="card-title">Total:</h5>
+              <p class="card-text" id="totalCarrito">$231.710</p>
+              <div class="row text-center">
+                <button class="btn btn-primary center">Pagar</button>
+              </div>
             </div>
           </div>
         </div>
