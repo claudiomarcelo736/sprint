@@ -81,6 +81,7 @@ for(i = 0; i < productos.length; i++) {
 const seleccionProductos = document.getElementsByClassName('selectorProducto');
 let detalleProductosCarrito = new Array();
 const listaProductos = document.getElementById('listadoCarrito');
+const numeroCarrito = document.getElementById('numeroCarrito');
 
 function agregarCarrito() {
     let subtotal = 0;
@@ -106,6 +107,8 @@ function agregarCarrito() {
             else;
         } else;
     }
+    // Actualizar número en boton de carrito en navbar
+    numeroCarrito.textContent = detalleProductosCarrito.length;
     // Creación de Listado de Carrito
     for(i = 0; i < detalleProductosCarrito.length; i++) {
         // Crea un elemento de lista
